@@ -17,7 +17,7 @@
 #define PAGE_EXECUTE_READ        0x20
 #define PAGE_EXECUTE             0x10
 
-#define WIN7
+// #define WIN7
 #ifdef WIN7
     #define SYSCALL_CODE_NTALLOCATE_VIRTUAL_MEMORY 0x15
     #define SYSCALL_CODE_NTFREE_VIRTUAL_MEMORY     0x1B
@@ -25,7 +25,7 @@
     #define SYSCALL_CODE_NTREAD_VIRTUAL_MEMORY     0x3C
     #define SYSCALL_CODE_NTADJUST_PRIVS_TOKEN      0x3E
     #define SYSCALL_CODE_NTOPEN_PROCESS_TOKEN      0xF9
-#else
+#else // WIN10 Current -- Obviously this might change
     #define SYSCALL_CODE_NTALLOCATE_VIRTUAL_MEMORY 0x18
     #define SYSCALL_CODE_NTFREE_VIRTUAL_MEMORY     0x1E
     #define SYSCALL_CODE_NTPROTECT_VIRTUAL_MEMORY  0x50
